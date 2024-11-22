@@ -14,7 +14,7 @@ import com.anjeemant.e_comm.model.Category;
 import com.anjeemant.e_comm.service.CategoryService;
 
 @Controller
-public class AdminController {
+public class AdminControllerCategory {
 	@Autowired
 	CategoryService categoryService;
 	
@@ -23,7 +23,7 @@ public class AdminController {
 		return "adminHome";
 	}
 	
-	@GetMapping("/admin/categories")
+	@GetMapping("/admin/categories") 
 	public String getCategories(Model model){
 		model.addAttribute("categories", categoryService.getAllCategory());
 		return "categories";
@@ -52,7 +52,7 @@ public class AdminController {
 	
 	@GetMapping("/admin/categories/update/{id}")
 	public String updateCategory(@PathVariable int id, Model model) {
-		Optional<Category> optional = categoryService.updateCategoryById(id);
+		Optional<Category> optional = categoryService.getCategoryById(id);
 		if(optional.isPresent()) {
 			model.addAttribute("category", optional.get());
 			return "categoriesAdd";
