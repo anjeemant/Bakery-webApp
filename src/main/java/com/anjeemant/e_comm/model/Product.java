@@ -1,6 +1,6 @@
 package com.anjeemant.e_comm.model;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Data;
 
 @Entity
