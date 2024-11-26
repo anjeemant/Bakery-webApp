@@ -229,3 +229,6 @@ Caused by: org.h2.jdbc.JdbcSQLInvalidAuthorizationSpecException: Wrong user name
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:461)
 	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
 	... 62 more
+2024-11-25 21:56:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "ROLES[*]"; expected "ROLLBACK, REVOKE, RUNSCRIPT, RELEASE"; SQL statement:
+ROLES [42001-200]

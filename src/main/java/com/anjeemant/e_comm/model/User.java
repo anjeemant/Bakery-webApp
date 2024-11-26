@@ -26,10 +26,9 @@ public class User {
 	@Email(message = "{errors.invalid_email}")
 	private String email;
 	
-	@NotEmpty
 	private String password;
 	
-	@ManyToMany
+	@ManyToMany(fetch = FetchType.EAGER)
 	@JoinTable(
 			name = "user_role",
 			joinColumns = {@JoinColumn(name = "USER_ID", referencedColumnName = "ID")},
